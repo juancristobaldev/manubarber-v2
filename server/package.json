@@ -1,0 +1,61 @@
+{
+  "name": "manubarber-api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prebuild": "prisma generate",
+    "build": "nest build",
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/main",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:deploy": "prisma migrate deploy",
+    "prisma:seed": "tsx prisma/seed.ts",
+    "validate": "nest build",
+    "test": "npm run test:json-db && npm run test:contract && npm run test:booking && npm run test:admin && npm run test:audit",
+    "test:contract": "tsx test/validate-contract.ts",
+    "test:booking": "tsx test/booking.integration.ts",
+    "test:booking-contract": "tsx test/graphql-contract.ts",
+    "test:admin": "tsx test/admin.integration.ts",
+    "test:json-db": "tsx test/json-db.test.ts",
+    "test:audit": "tsx test/full-coherence-audit.ts"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@as-integrations/express5": "^1.1.2",
+    "@nestjs/apollo": "^13.0.0",
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/graphql": "^13.0.0",
+    "@nestjs/jwt": "^11.0.0",
+    "@nestjs/passport": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "@prisma/client": "^6.0.0",
+    "argon2": "^0.41.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "graphql": "^16.9.0",
+    "graphql-type-json": "^0.3.2",
+    "joi": "^17.13.3",
+    "luxon": "^3.7.2",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@nestjs/schematics": "^11.0.0",
+    "@nestjs/testing": "^11.0.0",
+    "@types/luxon": "^3.7.6",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^22.0.0",
+    "@types/passport-jwt": "^4.0.1",
+    "prisma": "^6.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

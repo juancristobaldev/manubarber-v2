@@ -1,0 +1,18 @@
+{
+  "name": "manubarber",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix web",
+    "build": "npm run build --prefix server && npm run build --prefix web",
+    "build:prod": "npm run build --prefix server && npm run build --prefix web",
+    "build:api": "npm run build --prefix server",
+    "build:web": "npm run build --prefix web",
+    "dev": "npm run dev --prefix web -- -p 3000",
+    "dev:api": "npm run start:dev --prefix server",
+    "dev:web": "npm run dev --prefix web -- -p 3000",
+    "start": "npm run start:prod --prefix server",
+    "test": "npm run test --prefix server",
+    "test:contract": "npm run test:contract --prefix server",
+    "audit:ui": "node .agents/skills/manubarber-design-system/scripts/ui-kit-audit.js"
+  }
+}

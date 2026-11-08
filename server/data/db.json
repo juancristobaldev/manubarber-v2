@@ -1,0 +1,1387 @@
+{
+  "users": [
+    {
+      "id": "4dd0e197-d000-4e96-82da-521c47260961",
+      "email": "admin@manubarber.cl",
+      "displayName": "Administrador",
+      "role": "ADMIN",
+      "isActive": true,
+      "passwordHash": "$argon2id$v=19$m=65536,t=3,p=4$3D4xsy5H/BUXs3RqMPpjnw$ROzoewtNP6Kki3Q2iSnKlNTSJNSMNdVThUq44+pBVus",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T05:06:41.733Z"
+    }
+  ],
+  "businessProfiles": [
+    {
+      "id": "c3ab565c-e4d6-492d-bbaf-ed8360716c6d",
+      "key": "default",
+      "name": "ManuBarber",
+      "tagline": "Estilo, precisión y calle",
+      "timezone": "America/Santiago",
+      "currency": "CLP",
+      "logoUrl": "/images/manu-logo.png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:50:03.403Z"
+    }
+  ],
+  "businessContacts": [
+    {
+      "id": "bf803640-4863-49e6-a4eb-ae9652ccd9e2",
+      "key": "default",
+      "address": "Andrés Bello con General Mackenna",
+      "city": "Temuco",
+      "instagramUrl": "https://instagram.com/manu_barbeer",
+      "whatsappPhone": "56936355068",
+      "mapEmbedUrl": "https://maps.google.com/maps?q=Andres%20Bello%20con%20General%20Mackenna,%20Temuco&t=m&z=16&ie=UTF8&iwloc=&output=embed",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "brandAesthetics": [
+    {
+      "id": "0fd7b6a3-4618-4c8a-8870-e72b6780d5cf",
+      "key": "default",
+      "japaneseMark": "磨",
+      "eyebrow": "MANUBARBER STREET CLUB",
+      "heroSideText": "CALLE • CÓDIGO • PRECISIÓN",
+      "heroJapanese": "己を磨け",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "brandAccentColors": [
+    {
+      "id": "113f0b0e-5cfb-4f83-8cd1-fb0c27a04b94",
+      "brandId": "0fd7b6a3-4618-4c8a-8870-e72b6780d5cf",
+      "hexColor": "#D10B20",
+      "sortOrder": 0,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "5b19aa11-e3b0-4489-a727-3f61271c1739",
+      "brandId": "0fd7b6a3-4618-4c8a-8870-e72b6780d5cf",
+      "hexColor": "#7C3AED",
+      "sortOrder": 1,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "77ad8a76-d0e0-4276-8a94-4318f5420391",
+      "brandId": "0fd7b6a3-4618-4c8a-8870-e72b6780d5cf",
+      "hexColor": "#00E5FF",
+      "sortOrder": 2,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "pageHeroes": [
+    {
+      "id": "00839abd-3600-4f51-a99c-ca2548c48ede",
+      "pageKey": "HOME",
+      "eyebrow": null,
+      "title": "ESTILO, PRECISIÓN Y CALLE",
+      "description": "No es solo un corte, es identidad.",
+      "imageUrl": null,
+      "ctaLabel": null,
+      "ctaHref": null,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:58:58.537Z"
+    },
+    {
+      "id": "ff570bed-7a5f-4d38-b6ab-69e6d761f9bd",
+      "pageKey": "STORE",
+      "eyebrow": null,
+      "title": "TIENDA OFICIAL",
+      "description": "Mantén tu aroma impecable todos los días. Fragancias seleccionadas para tu estilo y personalidad. Resérvalas fácilmente y retíralas en tienda.",
+      "imageUrl": "/images/perfumes/LOGOCURSED.jpeg",
+      "ctaLabel": null,
+      "ctaHref": null,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "ee206104-2e58-46e5-9e30-aa269f70aa47",
+      "pageKey": "VIP",
+      "eyebrow": "Membresía Exclusiva",
+      "title": "CLIENTES VIP",
+      "description": "Cortes asegurados todo el mes. Mantén tu imagen intacta pagando menos. Exclusividad, ahorro y el mejor estilo de la calle.",
+      "imageUrl": "/images/hero.jpg",
+      "ctaLabel": null,
+      "ctaHref": null,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "galleryHeaders": [
+    {
+      "id": "ac6f09da-b9b7-4b5c-b619-45333c8f6f64",
+      "key": "default",
+      "title": "MI TRABAJO",
+      "description": "Precisión quirúrgica en cada línea.",
+      "watermark": "PORTAFOLIO",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "courseCtas": [
+    {
+      "id": "47caea57-7911-41db-912d-0c7daea6bbc5",
+      "key": "default",
+      "title": "TU FUTURO EMPIEZA HOY",
+      "description": "No dejes pasar la oportunidad de aprender un oficio rentable con alta demanda. Los cupos se llenan rápido.",
+      "label": "Quiero mi Cupo",
+      "href": null,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "vipBanners": [
+    {
+      "id": "54ae9423-4e91-490f-9e86-cee9ec207556",
+      "key": "default",
+      "title": "¿Quieres ser Cliente VIP?",
+      "description": "Asegura tu estilo todo el mes. Accede a cortes periódicos, agendamiento prioritario y beneficios exclusivos.",
+      "ctaLabel": "Ver Membresías",
+      "href": "/vip",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "vipComparisons": [
+    {
+      "id": "b3044f1d-5ef0-46b2-a7ac-e9aa7737519c",
+      "key": "default",
+      "visits": 4,
+      "individualPrice": 10000,
+      "vipPrice": 35000,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "philosophies": [
+    {
+      "id": "32248edf-61c3-4659-ad1c-93a324ada22d",
+      "key": "default",
+      "japaneseTitle": "哲学",
+      "title": "CALLE EN EL ALMA. PRECISIÓN EN CADA DETALLE.",
+      "kicker": "Street craft · Japanese discipline",
+      "quote": "EL FLOW SE SIENTE. LA TÉCNICA SE NOTA.",
+      "imageUrl": "/images/image.png",
+      "imageAlt": "Barbero trabajando con precisión y estilo urbano",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "philosophyParagraphs": [
+    {
+      "id": "180bff73-e3c6-4e32-81db-0d5fb8f6829b",
+      "philosophyId": "32248edf-61c3-4659-ad1c-93a324ada22d",
+      "text": "ManuBarber nace en la calle: identidad propia, actitud sin disfraz y respeto por el proceso. Tomamos esa energía urbana y la llevamos a una experiencia de barbería con estándar profesional.",
+      "sortOrder": 0
+    },
+    {
+      "id": "f5b8850b-19e3-418f-8741-8a9759bff63c",
+      "philosophyId": "32248edf-61c3-4659-ad1c-93a324ada22d",
+      "text": "Nos inspira la disciplina japonesa: manos firmes, herramientas impecables y técnica repetida hasta dominarla. Cada fade, perfilado y textura se trabaja con intención; no improvisamos tu estilo, lo construimos contigo.",
+      "sortOrder": 1
+    }
+  ],
+  "philosophyPillars": [
+    {
+      "id": "9383c425-97a9-4b37-a6ba-78e9bcc3f00a",
+      "philosophyId": "32248edf-61c3-4659-ad1c-93a324ada22d",
+      "label": "CALLE",
+      "description": "Tu historia, tu flow y una estética sin copias.",
+      "sortOrder": 0
+    },
+    {
+      "id": "cff66691-a28a-4cb1-be2b-19cb343efc84",
+      "philosophyId": "32248edf-61c3-4659-ad1c-93a324ada22d",
+      "label": "CÓDIGO",
+      "description": "Respeto, puntualidad y compromiso con cada cliente.",
+      "sortOrder": 1
+    },
+    {
+      "id": "efea2443-d1d7-489f-8b25-6efee0f9816b",
+      "philosophyId": "32248edf-61c3-4659-ad1c-93a324ada22d",
+      "label": "TÉCNICA",
+      "description": "Precisión profesional desde la consulta hasta el último detalle.",
+      "sortOrder": 2
+    }
+  ],
+  "experienceItems": [
+    {
+      "id": "1574b0d2-1655-44c9-ac26-e3a836f07127",
+      "title": "PRECISIÓN",
+      "description": "Técnicas depuradas y herramientas de alta gama para acabados perfectos.",
+      "sortOrder": 0,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "934cf1f5-0ddb-4a02-9e5c-0c8a57fa01c0",
+      "title": "EXPERIENCIA",
+      "description": "Un barbero enfocado en perfeccionar su arte en cada sesión.",
+      "sortOrder": 1,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "d9bad9e8-5df4-4868-bc36-3990efacf482",
+      "title": "EXCLUSIVIDAD",
+      "description": "Un ambiente cómodo y diseñado para tu desconexión.",
+      "sortOrder": 2,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "36946a6b-b30f-4c59-b8c4-16e63cc040cc",
+      "title": "PUNTUALIDAD",
+      "description": "Tu tiempo vale. Respetamos rigurosamente cada bloque agendado.",
+      "sortOrder": 3,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "valuePropositions": [
+    {
+      "id": "0ac95d20-be95-4525-a771-68f57d9270b1",
+      "icon": "★",
+      "title": "Experiencia",
+      "description": "Años perfeccionando la técnica. Manejo impecable de tijeras, navaja y máquina para resultados consistentes y de primer nivel.",
+      "sortOrder": 0,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "0c994159-3613-4b53-bb41-f36844c39b9d",
+      "icon": "♨",
+      "title": "Estilo Personalizado",
+      "description": "Analizamos tus facciones y tu vibra. Cada fade, textura y diseño está pensado exclusivamente para potenciar tu imagen.",
+      "sortOrder": 1,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "a4790d32-35ec-4929-bbe0-e68e584cece4",
+      "icon": "✦",
+      "title": "Atención Profesional",
+      "description": "Un ambiente premium donde el respeto y la puntualidad son ley. Relájate y deja que el experto haga su trabajo.",
+      "sortOrder": 2,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "882c663c-914d-4d93-b900-f2eeb03436c8",
+      "author": "CLIENTE MANUBARBER",
+      "service": "CORTE SIGNATURE",
+      "text": "La atención al detalle es increíble. No es solo un corte, es una asesoría completa.",
+      "sortOrder": 0,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "956cc50b-84aa-48b4-9a45-6b3ea6d137ae",
+      "author": "CLIENTE VIP",
+      "service": "FULL EXPERIENCE",
+      "text": "El mejor fade que me han hecho. La precisión justifica totalmente ser miembro.",
+      "sortOrder": 1,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "2d36fa61-0e12-441a-9887-3da1290373af",
+      "author": "CLIENTE FRECUENTE",
+      "service": "BEARD DESIGN",
+      "text": "Desde que entras hasta que sales, el servicio es impecable.",
+      "sortOrder": 2,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "pageSections": [
+    {
+      "id": "e78bee57-10fd-467f-81a9-512845c78e4d",
+      "pageKey": "home",
+      "sectionKey": "philosophy",
+      "japaneseLabel": "哲学",
+      "title": "FILOSOFÍA DE MARCA",
+      "subtitle": null,
+      "sortOrder": 0,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "6f30ca9d-6198-4622-b9af-e87dab9f2027",
+      "pageKey": "home",
+      "sectionKey": "services",
+      "japaneseLabel": "サービス",
+      "title": "SERVICIOS SIGNATURE",
+      "subtitle": null,
+      "sortOrder": 1,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "0e03d0d2-4790-4827-a8d2-d26bf6a430a4",
+      "pageKey": "home",
+      "sectionKey": "booking",
+      "japaneseLabel": "予約",
+      "title": "RESERVA TU EXPERIENCIA",
+      "subtitle": null,
+      "sortOrder": 2,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "38eaea0b-1ce0-4929-b5dd-0b5d609fd17c",
+      "pageKey": "home",
+      "sectionKey": "gallery",
+      "japaneseLabel": "作品",
+      "title": "GALERÍA DE TRABAJOS",
+      "subtitle": null,
+      "sortOrder": 3,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "8e469dd4-12a1-44c7-be8b-8b35eab5dc62",
+      "pageKey": "home",
+      "sectionKey": "memberships",
+      "japaneseLabel": "メンバーシップ",
+      "title": "MEMBRESÍAS",
+      "subtitle": null,
+      "sortOrder": 4,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "db1a700a-307a-4945-b943-a1d321e190b5",
+      "pageKey": "home",
+      "sectionKey": "products",
+      "japaneseLabel": "商品",
+      "title": "CUIDADO PREMIUM",
+      "subtitle": null,
+      "sortOrder": 5,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "24101e66-a406-4322-9191-29d2fcc3a213",
+      "pageKey": "home",
+      "sectionKey": "experience",
+      "japaneseLabel": "体験",
+      "title": "EL ESTÁNDAR MANUBARBER",
+      "subtitle": null,
+      "sortOrder": 6,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "5104db97-e28e-426c-8992-d53b010f1f9c",
+      "pageKey": "home",
+      "sectionKey": "testimonials",
+      "japaneseLabel": "お客様の声",
+      "title": "LA VOZ DEL CLUB",
+      "subtitle": null,
+      "sortOrder": 7,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "e10bc05b-4228-4a5d-9a7f-944328ec6cbb",
+      "pageKey": "home",
+      "sectionKey": "contact",
+      "japaneseLabel": "場所",
+      "title": "UBICACIÓN Y CONTACTO",
+      "subtitle": "Visítanos. Espacios diseñados para el confort, el detalle y la estética masculina.",
+      "sortOrder": 8,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "navigationItems": [
+    {
+      "id": "2d4f5518-c01f-40c8-a9a9-092d26107318",
+      "label": "Tienda",
+      "href": "/tienda",
+      "position": "HEADER",
+      "sortOrder": 0,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "3a71fc85-a1c6-41eb-acb7-8b3adc164a05",
+      "label": "Mi Trabajo",
+      "href": "/galeria",
+      "position": "HEADER",
+      "sortOrder": 1,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "f35e6a18-0dc1-4dd3-bc19-c2c35d568568",
+      "label": "Servicios",
+      "href": "/#servicios",
+      "position": "HEADER",
+      "sortOrder": 2,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "ec9e9fde-d1de-4d77-ba8b-d270f24c73ca",
+      "label": "VIP",
+      "href": "/vip",
+      "position": "HEADER",
+      "sortOrder": 3,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "3f9344d3-1a18-4e99-9005-638f51b56aee",
+      "label": "Cursos",
+      "href": "/capacitacion",
+      "position": "HEADER",
+      "sortOrder": 4,
+      "isVisible": true,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "businessHours": [
+    {
+      "id": "da7c1f4a-14d1-4593-bba4-389d40cf11e4",
+      "dayOfWeek": 1,
+      "opensAt": "12:30",
+      "closesAt": "21:30",
+      "isClosed": false,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "906273f4-a2f4-4715-abed-e8d695b34a22",
+      "dayOfWeek": 2,
+      "opensAt": "12:30",
+      "closesAt": "21:30",
+      "isClosed": false,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "63bbe76b-7725-4ff2-8a9f-c8fa118f22a5",
+      "dayOfWeek": 3,
+      "opensAt": "12:30",
+      "closesAt": "21:30",
+      "isClosed": false,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "e954541c-6e25-45db-8885-7190ec12bf51",
+      "dayOfWeek": 4,
+      "opensAt": "12:30",
+      "closesAt": "21:30",
+      "isClosed": false,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "ce9b345b-5430-489d-98be-b03aa702cb38",
+      "dayOfWeek": 5,
+      "opensAt": "12:30",
+      "closesAt": "21:30",
+      "isClosed": false,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "da62f0b4-84c3-4972-8552-85029589268d",
+      "dayOfWeek": 6,
+      "opensAt": "12:30",
+      "closesAt": "21:30",
+      "isClosed": false,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "11ed8139-2058-40ca-a4b8-ea727f91c908",
+      "dayOfWeek": 7,
+      "opensAt": "12:30",
+      "closesAt": "21:30",
+      "isClosed": false,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "mediaAssets": [
+    {
+      "id": "4ada2949-e39d-4bf2-a60d-bc6b0e30565e",
+      "url": "/images/manu-logo.png",
+      "alt": "ManuBarber Logo",
+      "title": "Logo",
+      "mimeType": "image/png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "b831f871-8d04-46b2-8fc5-34ff64f2b912",
+      "url": "/images/hero.jpg",
+      "alt": "Hero Barbero",
+      "title": "Hero",
+      "mimeType": "image/jpeg",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "4f1f8e9b-359d-4b18-85f7-55ffa48c437e",
+      "url": "/images/image.png",
+      "alt": "Barbero trabajando con precisión y estilo urbano",
+      "title": "Filosofía",
+      "mimeType": "image/png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "7c07cbd7-b52c-4ce9-8c99-ff04bd05bf02",
+      "url": "/images/perfumes/LOGOCURSED.jpeg",
+      "alt": "Tienda Oficial Fragancias",
+      "title": "Tienda",
+      "mimeType": "image/jpeg",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "68f49487-832a-40ff-b221-7c39a1fdfac2",
+      "url": "/images/cut-1.png",
+      "alt": "MID FADE EN V CON DISEÑO",
+      "title": "MID FADE EN V CON DISEÑO",
+      "mimeType": "image/png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "b7b3f3d9-8d8c-42bb-9b3d-c79f05d67f16",
+      "url": "/images/cut-2.png",
+      "alt": "LOW FADE TEXTURIZADO",
+      "title": "LOW FADE TEXTURIZADO",
+      "mimeType": "image/png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "e302148b-d645-403c-ad6f-4e7647e86162",
+      "url": "/images/cut-3.png",
+      "alt": "DISEÑO VERSACE PREMIUM",
+      "title": "DISEÑO VERSACE PREMIUM",
+      "mimeType": "image/png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "6aa0580d-e326-4678-b9ee-4a6c0a123fc4",
+      "url": "/images/cut-4.png",
+      "alt": "BURST FADE",
+      "title": "BURST FADE",
+      "mimeType": "image/png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "201043e1-8f2c-43e2-b299-30c5391c956c",
+      "url": "/images/cut-5.jpg",
+      "alt": "BURST FADE",
+      "title": "BURST FADE",
+      "mimeType": "image/jpeg",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "9de96326-c30b-4bb8-ac8c-258e60022c89",
+      "url": "/images/normal-1.jpg",
+      "alt": "BURST FADE",
+      "title": "BURST FADE",
+      "mimeType": "image/jpeg",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "23266fd3-a1a0-4280-ad3f-8558f1af7659",
+      "url": "/images/normal-2.jpg",
+      "alt": "BURST FADE",
+      "title": "BURST FADE",
+      "mimeType": "image/jpeg",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "e04a939d-ff62-46b7-ad22-0e5c96640076",
+      "url": "/images/normal-3.jpg",
+      "alt": "BURST FADE",
+      "title": "BURST FADE",
+      "mimeType": "image/jpeg",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "c40b3b24-1f2c-40c3-85e1-b0f6f91acd9f",
+      "url": "/images/normal-4.jpg",
+      "alt": "BURST FADE",
+      "title": "BURST FADE",
+      "mimeType": "image/jpeg",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "e7bb6392-b1c0-48b6-95be-42b3c10f13de",
+      "url": "/images/normal-5.jpg",
+      "alt": "BURST FADE",
+      "title": "BURST FADE",
+      "mimeType": "image/jpeg",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "3d5fc48e-9d8d-4a8c-a651-095ed12dc4e7",
+      "url": "/images/perfumes/PROMO.png",
+      "alt": "Promo Cursed Smells",
+      "title": "Promo Cursed Smells",
+      "mimeType": "image/png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "3c537c66-cb3b-49e0-af76-8b304ef0807a",
+      "url": "/images/perfumes/ASAD.png",
+      "alt": "Perfume ASAD",
+      "title": "Perfume ASAD",
+      "mimeType": "image/png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "5ca725a8-204e-468b-b8e2-1216b7a98642",
+      "url": "/images/perfumes/SALVANG.png",
+      "alt": "SALVANG Pour Home",
+      "title": "SALVANG Pour Home",
+      "mimeType": "image/png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "5efc328d-4256-4e77-9124-5d8e5451461d",
+      "url": "/images/perfumes/VIGOROUS.png",
+      "alt": "VIGOROUS",
+      "title": "VIGOROUS",
+      "mimeType": "image/png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "15523ed9-fa60-400d-9587-055ae6a66cdb",
+      "url": "/images/perfumes/PERFUME.png",
+      "alt": "Perfume",
+      "title": "Perfume",
+      "mimeType": "image/png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "534def4a-6564-4192-b91a-23ff4980620e",
+      "url": "/images/perfumes/PERFUMES.png",
+      "alt": "Perfumes",
+      "title": "Perfumes",
+      "mimeType": "image/png",
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "ec91e853-d3cb-491b-b648-6789a9948c8b",
+      "slug": "corte-cejas",
+      "name": "Corte + Cejas",
+      "description": "Corte a elección con perfilado de cejas preciso.",
+      "price": 10000,
+      "durationMinutes": 60,
+      "status": "PUBLISHED",
+      "isFeatured": false,
+      "sortOrder": 0,
+      "icon": null,
+      "badge": null,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "fa781585-8498-4f99-96e8-2bef2580578e",
+      "slug": "corte-barba",
+      "name": "Corte + Barba",
+      "description": "Corte premium + perfilado de barba.",
+      "price": 16000,
+      "durationMinutes": 60,
+      "status": "PUBLISHED",
+      "isFeatured": true,
+      "sortOrder": 1,
+      "icon": null,
+      "badge": null,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "ddbe6a73-b747-4d7a-9a93-8dee9bd690c1",
+      "slug": "corte-diseno",
+      "name": "Corte con Diseño",
+      "description": "Corte fade con diseño freestyle o a elección.",
+      "price": 12000,
+      "durationMinutes": 60,
+      "status": "PUBLISHED",
+      "isFeatured": false,
+      "sortOrder": 2,
+      "icon": null,
+      "badge": null,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "galleryCategories": [
+    {
+      "id": "71c9ddfa-098f-45a2-b002-6f6bb49561f0",
+      "slug": "design",
+      "name": "Corte con Diseño",
+      "sortOrder": 0,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "1b3978d0-2399-492b-8fb0-0e8390670ac6",
+      "slug": "normal",
+      "name": "Corte Normal",
+      "sortOrder": 1,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "galleryItems": [
+    {
+      "id": "9429d651-a5f7-4fb7-bc84-bec1659f07ca",
+      "title": "MID FADE EN V CON DISEÑO",
+      "alt": "MID FADE EN V CON DISEÑO",
+      "mediaId": "68f49487-832a-40ff-b221-7c39a1fdfac2",
+      "categoryId": "71c9ddfa-098f-45a2-b002-6f6bb49561f0",
+      "status": "PUBLISHED",
+      "sortOrder": 0,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "6030fea7-9915-4966-9b6b-2751fe16d799",
+      "title": "LOW FADE TEXTURIZADO",
+      "alt": "LOW FADE TEXTURIZADO",
+      "mediaId": "b7b3f3d9-8d8c-42bb-9b3d-c79f05d67f16",
+      "categoryId": "71c9ddfa-098f-45a2-b002-6f6bb49561f0",
+      "status": "PUBLISHED",
+      "sortOrder": 1,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "fbd603ea-b4b2-4402-955d-5fab8ff4d930",
+      "title": "DISEÑO VERSACE PREMIUM",
+      "alt": "DISEÑO VERSACE PREMIUM",
+      "mediaId": "e302148b-d645-403c-ad6f-4e7647e86162",
+      "categoryId": "71c9ddfa-098f-45a2-b002-6f6bb49561f0",
+      "status": "PUBLISHED",
+      "sortOrder": 2,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "e399f9da-1622-4144-ab09-2c9d8c3deeae",
+      "title": "BURST FADE",
+      "alt": "BURST FADE",
+      "mediaId": "6aa0580d-e326-4678-b9ee-4a6c0a123fc4",
+      "categoryId": "71c9ddfa-098f-45a2-b002-6f6bb49561f0",
+      "status": "PUBLISHED",
+      "sortOrder": 3,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "a0ab8cd5-a1d2-479d-966a-f8df16a8ae7a",
+      "title": "BURST FADE",
+      "alt": "BURST FADE",
+      "mediaId": "201043e1-8f2c-43e2-b299-30c5391c956c",
+      "categoryId": "71c9ddfa-098f-45a2-b002-6f6bb49561f0",
+      "status": "PUBLISHED",
+      "sortOrder": 4,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "3299698b-8694-48eb-8b10-2b251f32d063",
+      "title": "BURST FADE",
+      "alt": "BURST FADE",
+      "mediaId": "9de96326-c30b-4bb8-ac8c-258e60022c89",
+      "categoryId": "1b3978d0-2399-492b-8fb0-0e8390670ac6",
+      "status": "PUBLISHED",
+      "sortOrder": 5,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "510652df-7135-4aa8-8e86-8701d2295841",
+      "title": "BURST FADE",
+      "alt": "BURST FADE",
+      "mediaId": "23266fd3-a1a0-4280-ad3f-8558f1af7659",
+      "categoryId": "1b3978d0-2399-492b-8fb0-0e8390670ac6",
+      "status": "PUBLISHED",
+      "sortOrder": 6,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "cdcaa2ea-9b19-4785-a9df-083780def027",
+      "title": "BURST FADE",
+      "alt": "BURST FADE",
+      "mediaId": "e04a939d-ff62-46b7-ad22-0e5c96640076",
+      "categoryId": "1b3978d0-2399-492b-8fb0-0e8390670ac6",
+      "status": "PUBLISHED",
+      "sortOrder": 7,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "f41b0ce0-85c9-4211-a71b-25af35264d9e",
+      "title": "BURST FADE",
+      "alt": "BURST FADE",
+      "mediaId": "c40b3b24-1f2c-40c3-85e1-b0f6f91acd9f",
+      "categoryId": "1b3978d0-2399-492b-8fb0-0e8390670ac6",
+      "status": "PUBLISHED",
+      "sortOrder": 8,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "ed468ce1-1de8-4402-b250-102a5d454c52",
+      "title": "BURST FADE",
+      "alt": "BURST FADE",
+      "mediaId": "e7bb6392-b1c0-48b6-95be-42b3c10f13de",
+      "categoryId": "1b3978d0-2399-492b-8fb0-0e8390670ac6",
+      "status": "PUBLISHED",
+      "sortOrder": 9,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "44018585-bd61-4bab-adeb-bb65ca70eef0",
+      "slug": "promo-cursed-smells",
+      "name": "Promo Cursed Smells",
+      "description": null,
+      "imageId": "3d5fc48e-9d8d-4a8c-a651-095ed12dc4e7",
+      "badge": "Más Vendido",
+      "status": "PUBLISHED",
+      "isFeatured": true,
+      "stockQuantity": 10,
+      "sortOrder": 0,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "c5e9e337-5dea-4385-bcd1-5d26d6fb3d1f",
+      "slug": "perfume-asad",
+      "name": "Perfume ASAD",
+      "description": null,
+      "imageId": "3c537c66-cb3b-49e0-af76-8b304ef0807a",
+      "badge": null,
+      "status": "PUBLISHED",
+      "isFeatured": false,
+      "stockQuantity": 10,
+      "sortOrder": 1,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "0174201c-f37f-46bd-8a6d-1ba61e10d8ab",
+      "slug": "salvang-pour-home",
+      "name": "SALVANG Pour Home",
+      "description": null,
+      "imageId": "5ca725a8-204e-468b-b8e2-1216b7a98642",
+      "badge": null,
+      "status": "PUBLISHED",
+      "isFeatured": false,
+      "stockQuantity": 10,
+      "sortOrder": 2,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "4ecf5917-ffec-47e8-819a-056b75f0cd38",
+      "slug": "vigorous",
+      "name": "VIGOROUS",
+      "description": null,
+      "imageId": "5efc328d-4256-4e77-9124-5d8e5451461d",
+      "badge": null,
+      "status": "PUBLISHED",
+      "isFeatured": false,
+      "stockQuantity": 10,
+      "sortOrder": 3,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "e4c783e2-c421-4b13-9221-23c9af1da949",
+      "slug": "perfume",
+      "name": "Perfume",
+      "description": null,
+      "imageId": "15523ed9-fa60-400d-9587-055ae6a66cdb",
+      "badge": null,
+      "status": "PUBLISHED",
+      "isFeatured": false,
+      "stockQuantity": 10,
+      "sortOrder": 4,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "d8a95cc1-a929-4e7a-bea7-3e01a19fe77d",
+      "slug": "perfumes",
+      "name": "Perfumes",
+      "description": null,
+      "imageId": "534def4a-6564-4192-b91a-23ff4980620e",
+      "badge": null,
+      "status": "PUBLISHED",
+      "isFeatured": false,
+      "stockQuantity": 10,
+      "sortOrder": 5,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "productVariants": [
+    {
+      "id": "235a19f5-d679-48ae-9f01-6dfe6227ea9e",
+      "productId": "44018585-bd61-4bab-adeb-bb65ca70eef0",
+      "label": "100ml",
+      "price": 12000,
+      "stockQuantity": 10,
+      "sku": null
+    },
+    {
+      "id": "0ee4cf3d-906e-48c4-a548-e7cf823cf97a",
+      "productId": "44018585-bd61-4bab-adeb-bb65ca70eef0",
+      "label": "30ml",
+      "price": 6000,
+      "stockQuantity": 10,
+      "sku": null
+    },
+    {
+      "id": "c7bc4109-db70-425a-bdc8-7848a67143b3",
+      "productId": "c5e9e337-5dea-4385-bcd1-5d26d6fb3d1f",
+      "label": "30ml",
+      "price": 6000,
+      "stockQuantity": 10,
+      "sku": null
+    },
+    {
+      "id": "7ecc2d96-5576-4dc0-84d1-96f9d44826a6",
+      "productId": "0174201c-f37f-46bd-8a6d-1ba61e10d8ab",
+      "label": "30ml",
+      "price": 6000,
+      "stockQuantity": 10,
+      "sku": null
+    },
+    {
+      "id": "4e7f611d-57af-48a1-9223-3693d6baa965",
+      "productId": "4ecf5917-ffec-47e8-819a-056b75f0cd38",
+      "label": "100ml",
+      "price": 12000,
+      "stockQuantity": 10,
+      "sku": null
+    },
+    {
+      "id": "3dfb82f8-7984-4836-b121-727906a7ffdd",
+      "productId": "e4c783e2-c421-4b13-9221-23c9af1da949",
+      "label": "30ml",
+      "price": 6000,
+      "stockQuantity": 10,
+      "sku": null
+    },
+    {
+      "id": "bd43154b-bda0-4be2-ac46-0ba1b709cbb4",
+      "productId": "d8a95cc1-a929-4e7a-bea7-3e01a19fe77d",
+      "label": "30ml",
+      "price": 6000,
+      "stockQuantity": 10,
+      "sku": null
+    }
+  ],
+  "membershipPlans": [
+    {
+      "id": "1cc39187-a31e-4a76-8ee8-0b7b694914cf",
+      "slug": "vip-solo-corte",
+      "name": "Solo Corte",
+      "description": "Ideal para mantener tu degradado y estilo fresco todas las semanas.",
+      "monthlyPrice": 35000,
+      "compareAtPrice": 40000,
+      "badge": "Plan Básico VIP",
+      "status": "PUBLISHED",
+      "isFeatured": false,
+      "sortOrder": 0,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    },
+    {
+      "id": "9d403de4-c3bd-4130-b405-3d7aa02c287c",
+      "slug": "vip-corte-barba",
+      "name": "Corte + Barba",
+      "description": "El servicio completo. Corte y perfilado de barba para una imagen impecable.",
+      "monthlyPrice": 50000,
+      "compareAtPrice": 60000,
+      "badge": "Más Popular",
+      "status": "PUBLISHED",
+      "isFeatured": true,
+      "sortOrder": 1,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "membershipBenefits": [
+    {
+      "id": "0583f96a-e591-4c35-883e-ce1c0043804c",
+      "planId": "1cc39187-a31e-4a76-8ee8-0b7b694914cf",
+      "text": "4 Cortes de cabello al mes",
+      "icon": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "e19f316e-2fd9-4fcf-9e1f-a14f8b99ed57",
+      "planId": "1cc39187-a31e-4a76-8ee8-0b7b694914cf",
+      "text": "Agendamiento prioritario",
+      "icon": null,
+      "sortOrder": 1
+    },
+    {
+      "id": "69c530b2-d065-4c14-a128-a316f3398eb3",
+      "planId": "1cc39187-a31e-4a76-8ee8-0b7b694914cf",
+      "text": "Tarjeta de Cliente VIP física",
+      "icon": null,
+      "sortOrder": 2
+    },
+    {
+      "id": "225224c3-fa3b-42ce-839d-9bb7931823ac",
+      "planId": "9d403de4-c3bd-4130-b405-3d7aa02c287c",
+      "text": "4 Cortes de cabello al mes",
+      "icon": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "7ec5caca-28e2-4032-8ee6-5d972959fe50",
+      "planId": "9d403de4-c3bd-4130-b405-3d7aa02c287c",
+      "text": "4 Perfilados de barba completos",
+      "icon": null,
+      "sortOrder": 1
+    },
+    {
+      "id": "ec283850-2498-4597-adb9-100cff36b661",
+      "planId": "9d403de4-c3bd-4130-b405-3d7aa02c287c",
+      "text": "Agendamiento prioritario",
+      "icon": null,
+      "sortOrder": 2
+    },
+    {
+      "id": "cfd5a2cd-7943-4f5e-8914-102c217eb949",
+      "planId": "9d403de4-c3bd-4130-b405-3d7aa02c287c",
+      "text": "Tarjeta de Cliente VIP física",
+      "icon": null,
+      "sortOrder": 3
+    }
+  ],
+  "courses": [
+    {
+      "id": "bcdd01ee-04dd-4af2-bb9d-17e26b91bfed",
+      "slug": "barberia-basico",
+      "title": "CURSO DE BARBERÍA",
+      "subtitle": "Básico",
+      "description": "¿Quieres aprender a cortar cabello y generar ingresos? Este curso es para ti.",
+      "pricePerClass": 35000,
+      "whatsappPhone": "56971405996",
+      "heroImageId": null,
+      "status": "PUBLISHED",
+      "sortOrder": 0,
+      "createdAt": "2026-11-06T04:44:07.708Z",
+      "updatedAt": "2026-11-06T04:44:07.708Z"
+    }
+  ],
+  "courseModules": [
+    {
+      "id": "a61566dc-89bd-46b8-bfbd-bd3bb9abf741",
+      "courseId": "bcdd01ee-04dd-4af2-bb9d-17e26b91bfed",
+      "title": "Aprende desde cero",
+      "description": "No necesitas experiencia previa. Te enseñaremos el manejo de herramientas y teoría fundamental paso a paso.",
+      "icon": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "00956e6b-a8c2-400c-b2e9-e883cc402c2f",
+      "courseId": "bcdd01ee-04dd-4af2-bb9d-17e26b91bfed",
+      "title": "Degradados (Fade)",
+      "description": "Aprende a borrar líneas perfectamente para crear transiciones suaves y profesionales.",
+      "icon": null,
+      "sortOrder": 1
+    },
+    {
+      "id": "3d6e0116-78c1-44a5-8eea-df2831197209",
+      "courseId": "bcdd01ee-04dd-4af2-bb9d-17e26b91bfed",
+      "title": "Cortes Formales",
+      "description": "Estructura a tijera, divisiones y técnicas clásicas.",
+      "icon": null,
+      "sortOrder": 2
+    },
+    {
+      "id": "3e6eff22-cf06-4ea8-b7a6-7b4adeb6b77a",
+      "courseId": "bcdd01ee-04dd-4af2-bb9d-17e26b91bfed",
+      "title": "Diseños Modernos",
+      "description": "Líneas, figuras y freestyle urbano con navaja y trimmer.",
+      "icon": null,
+      "sortOrder": 3
+    },
+    {
+      "id": "4765dbe9-5b12-45f6-9315-06ce7eb35d01",
+      "courseId": "bcdd01ee-04dd-4af2-bb9d-17e26b91bfed",
+      "title": "Barbas Perfectas",
+      "description": "Perfilado simétrico y técnicas para esculpir barbas.",
+      "icon": null,
+      "sortOrder": 4
+    },
+    {
+      "id": "931c1280-31f6-4726-b2ba-1a484bf8cc92",
+      "courseId": "bcdd01ee-04dd-4af2-bb9d-17e26b91bfed",
+      "title": "Peinados Profesionales",
+      "description": "Polvos, ceras y secador para volumen y textura.",
+      "icon": null,
+      "sortOrder": 5
+    }
+  ],
+  "customers": [],
+  "bookings": [],
+  "productReservations": [],
+  "membershipLeads": [],
+  "courseLeads": [],
+  "auditLogs": [
+    {
+      "id": "baab5609-c595-460f-aca3-7fbb511c392c",
+      "actorId": "4dd0e197-d000-4e96-82da-521c47260961",
+      "action": "UPDATE",
+      "entity": "PageHero",
+      "entityId": "00839abd-3600-4f51-a99c-ca2548c48ede",
+      "createdAt": "2026-11-06T04:58:58.538Z"
+    },
+    {
+      "id": "fa7348b1-ab63-4f93-9050-0e30111dcda5",
+      "actorId": "4dd0e197-d000-4e96-82da-521c47260961",
+      "action": "CREATE",
+      "entity": "Service",
+      "entityId": "e921a3c0-d7fd-4c3b-80f7-a7ac3641aaa0",
+      "createdAt": "2026-11-06T05:00:41.475Z"
+    },
+    {
+      "id": "98cdbee5-6b09-499c-a6fd-42e610a685c7",
+      "actorId": "4dd0e197-d000-4e96-82da-521c47260961",
+      "action": "DELETE",
+      "entity": "Service",
+      "entityId": "e921a3c0-d7fd-4c3b-80f7-a7ac3641aaa0",
+      "createdAt": "2026-11-06T05:00:47.708Z"
+    }
+  ],
+  "auditChanges": [
+    {
+      "id": "e003c82f-7a90-4c9a-a36e-bb02dbfee45d",
+      "auditLogId": "baab5609-c595-460f-aca3-7fbb511c392c",
+      "field": "description",
+      "valueType": "STRING",
+      "oldString": "No es solo un corte, es identidad. Elevamos tu imagen con técnicas premium y esencia urbana.",
+      "newString": "No es solo un corte, es identidad."
+    },
+    {
+      "id": "bf3a70fd-644f-45b4-a048-5f9ceb8682bb",
+      "auditLogId": "baab5609-c595-460f-aca3-7fbb511c392c",
+      "field": "imageUrl",
+      "valueType": "STRING",
+      "oldString": "/images/hero.jpg",
+      "newString": null
+    },
+    {
+      "id": "5d132265-d82b-4b7f-8e4c-cfe5a2676c63",
+      "auditLogId": "baab5609-c595-460f-aca3-7fbb511c392c",
+      "field": "ctaLabel",
+      "valueType": "STRING",
+      "oldString": "Reservar Hora",
+      "newString": null
+    },
+    {
+      "id": "02977ee6-d97b-4ac5-8069-013e79a1011a",
+      "auditLogId": "baab5609-c595-460f-aca3-7fbb511c392c",
+      "field": "ctaHref",
+      "valueType": "STRING",
+      "oldString": "#reserva",
+      "newString": null
+    },
+    {
+      "id": "a9dbc3a3-f7cf-46c2-a825-20cd9c8c85da",
+      "auditLogId": "fa7348b1-ab63-4f93-9050-0e30111dcda5",
+      "field": "status",
+      "valueType": "STRING",
+      "oldString": null,
+      "newString": "DRAFT"
+    },
+    {
+      "id": "ab1f36d2-a7d5-4518-a763-e561f7531233",
+      "auditLogId": "fa7348b1-ab63-4f93-9050-0e30111dcda5",
+      "field": "isFeatured",
+      "valueType": "BOOLEAN",
+      "oldBoolean": null,
+      "newBoolean": false
+    },
+    {
+      "id": "393dafdf-4c70-474b-9df3-f9f327c2f716",
+      "auditLogId": "fa7348b1-ab63-4f93-9050-0e30111dcda5",
+      "field": "sortOrder",
+      "valueType": "INTEGER",
+      "oldInteger": null,
+      "newInteger": 0
+    },
+    {
+      "id": "fed9d2cb-cb5a-471b-ade9-89f4f1a74344",
+      "auditLogId": "fa7348b1-ab63-4f93-9050-0e30111dcda5",
+      "field": "durationMinutes",
+      "valueType": "INTEGER",
+      "oldInteger": null,
+      "newInteger": 45
+    },
+    {
+      "id": "859723ed-a688-4567-b160-58d32a175643",
+      "auditLogId": "fa7348b1-ab63-4f93-9050-0e30111dcda5",
+      "field": "slug",
+      "valueType": "STRING",
+      "oldString": null,
+      "newString": "servicio-test-json"
+    },
+    {
+      "id": "d41bb5c7-75b6-4f62-875d-0ba1429208bf",
+      "auditLogId": "fa7348b1-ab63-4f93-9050-0e30111dcda5",
+      "field": "name",
+      "valueType": "STRING",
+      "oldString": null,
+      "newString": "Servicio Test JSON"
+    },
+    {
+      "id": "7ebff797-8b85-48df-b8ce-23f0de9c4446",
+      "auditLogId": "fa7348b1-ab63-4f93-9050-0e30111dcda5",
+      "field": "description",
+      "valueType": "STRING",
+      "oldString": null,
+      "newString": "Corte test"
+    },
+    {
+      "id": "27434fe0-156e-4f19-8af4-29db91c58cd2",
+      "auditLogId": "fa7348b1-ab63-4f93-9050-0e30111dcda5",
+      "field": "price",
+      "valueType": "INTEGER",
+      "oldInteger": null,
+      "newInteger": 12000
+    },
+    {
+      "id": "169fd8c4-ab3c-44fe-8ad1-d6073f092e7a",
+      "auditLogId": "98cdbee5-6b09-499c-a6fd-42e610a685c7",
+      "field": "status",
+      "valueType": "STRING",
+      "oldString": "DRAFT",
+      "newString": null
+    },
+    {
+      "id": "a779155f-6323-4d40-8723-7361a03361f1",
+      "auditLogId": "98cdbee5-6b09-499c-a6fd-42e610a685c7",
+      "field": "isFeatured",
+      "valueType": "BOOLEAN",
+      "oldBoolean": false,
+      "newBoolean": null
+    },
+    {
+      "id": "3f4a1d81-57e7-429e-9ff1-187f7d9aafe7",
+      "auditLogId": "98cdbee5-6b09-499c-a6fd-42e610a685c7",
+      "field": "sortOrder",
+      "valueType": "INTEGER",
+      "oldInteger": 0,
+      "newInteger": null
+    },
+    {
+      "id": "927a7e01-f569-405c-ac90-694c3d20db34",
+      "auditLogId": "98cdbee5-6b09-499c-a6fd-42e610a685c7",
+      "field": "durationMinutes",
+      "valueType": "INTEGER",
+      "oldInteger": 45,
+      "newInteger": null
+    },
+    {
+      "id": "8f472d22-d4d9-4b63-8e7d-5b86bb5c0a23",
+      "auditLogId": "98cdbee5-6b09-499c-a6fd-42e610a685c7",
+      "field": "slug",
+      "valueType": "STRING",
+      "oldString": "servicio-test-json",
+      "newString": null
+    },
+    {
+      "id": "cf4453f0-131f-47ec-b89e-08429255fe7c",
+      "auditLogId": "98cdbee5-6b09-499c-a6fd-42e610a685c7",
+      "field": "name",
+      "valueType": "STRING",
+      "oldString": "Servicio Test JSON",
+      "newString": null
+    },
+    {
+      "id": "2b35c490-31e2-47f9-9f6c-6bd805ffeac6",
+      "auditLogId": "98cdbee5-6b09-499c-a6fd-42e610a685c7",
+      "field": "description",
+      "valueType": "STRING",
+      "oldString": "Corte test",
+      "newString": null
+    },
+    {
+      "id": "7a841fd7-6e5c-48e4-8414-0a697e82714c",
+      "auditLogId": "98cdbee5-6b09-499c-a6fd-42e610a685c7",
+      "field": "price",
+      "valueType": "INTEGER",
+      "oldInteger": 12000,
+      "newInteger": null
+    }
+  ],
+  "legacySettings": [],
+  "legacySettingNodes": []
+}

@@ -1,0 +1,9 @@
+.git
+.github
+.agents
+.gemini
+server/data/test-*.json
+server/test
+web/.next-dev
+*.log
+.DS_Store

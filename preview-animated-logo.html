@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ManuBarber - Vista Previa de Animaciones</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #0A0A0A;
+      color: #FFFFFF;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    p.subtitle {
+      color: #888;
+      margin-top: 0;
+      margin-bottom: 30px;
+      text-align: center;
+      max-width: 600px;
+    }
+    .preview-grid {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      background: #141414;
+      border: 1px solid #2A2A2A;
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      max-width: 380px;
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+    }
+    .card p.desc {
+      font-size: 12px;
+      color: #888;
+      margin-top: 0;
+      margin-bottom: 16px;
+      text-align: center;
+      min-height: 36px;
+    }
+    .logo-container {
+      width: 320px;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: #050505;
+      border: 1px solid #1a1a1a;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .badge-info {
+      margin-top: 14px;
+      font-size: 11px;
+      padding: 4px 10px;
+      background: #222;
+      border-radius: 4px;
+      color: #00e676;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>ManuBarber &middot; Animaci&oacute;n del Logo</h1>
+  <p class="subtitle">Estructura negra 100% est&aacute;tica e intacta (lo negro no se toca). Animaci&oacute;n exclusiva del relleno blanco con creaci&oacute;n y retroceso.</p>
+
+  <div class="preview-grid">
+    <div class="card">
+      <h3>1. Estilo Video (Trazo &rarr; Relleno &rarr; Retroceso)</h3>
+      <p class="desc">Id&eacute;ntica a la referencia del video: las l&iacute;neas blancas se trazan dentro de las letras, se llenan de blanco, se detienen, y luego se desdibujan en reversa.</p>
+      <div class="logo-container">
+        <img src="manu-logo-animated-stroke.svg" alt="Animación estilo Video">
+      </div>
+      <span class="badge-info">manu-logo-animated-stroke.svg (Activo principal)</span>
+    </div>
+
+    <div class="card">
+      <h3>2. Barrido Lineal Puro (Solo Relleno)</h3>
+      <p class="desc">El relleno blanco s&oacute;lido se revela de izquierda a derecha sin l&iacute;neas de trazo previo, se mantiene, y luego retrocede de derecha a izquierda.</p>
+      <div class="logo-container">
+        <img src="manu-logo-animated-fill.svg" alt="Barrido lineal de relleno">
+      </div>
+      <span class="badge-info">manu-logo-animated-fill.svg</span>
+    </div>
+  </div>
+</body>
+</html>

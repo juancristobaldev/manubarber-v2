@@ -1,0 +1,713 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AdminCatalog {
+  categories: [GalleryCategory!]!
+  courseLeads: [AdminLead!]!
+  courses: [Course!]!
+  gallery: [GalleryItem!]!
+  hours: [BusinessHour!]!
+  media: [Media!]!
+  membershipLeads: [AdminLead!]!
+  navigation: [Navigation!]!
+  plans: [MembershipPlan!]!
+  productLeads: [AdminLead!]!
+  products: [Product!]!
+  services: [Service!]!
+}
+
+type AdminLead {
+  courseName: String
+  createdAt: DateTime!
+  customerName: String
+  email: String
+  id: String!
+  notes: String
+  phone: String
+  planName: String
+  productName: String
+  status: String!
+}
+
+type AuditChangeView {
+  field: String!
+  newValue: String
+  oldValue: String
+  valueType: String!
+}
+
+type AuditEntry {
+  action: String!
+  actorName: String
+  changes: [AuditChangeView!]!
+  createdAt: DateTime!
+  entity: String!
+  entityId: String!
+  id: String!
+}
+
+type AuthPayload {
+  accessToken: String!
+  user: AuthUser!
+}
+
+type AuthUser {
+  displayName: String!
+  email: String!
+  id: String!
+  role: String!
+}
+
+type Booking {
+  customerEmail: String
+  customerId: String!
+  customerName: String
+  customerPhone: String
+  depositAmount: Float
+  id: String!
+  paymentStatus: String
+  scheduledAt: DateTime
+  serviceId: String!
+  serviceName: String
+  status: String!
+}
+
+type BrandAccentColor {
+  hexColor: String!
+  sortOrder: Int!
+}
+
+type BrandAesthetic {
+  accentColors: [BrandAccentColor!]!
+  eyebrow: String!
+  heroJapanese: String!
+  heroSideText: String!
+  japaneseMark: String!
+}
+
+input BrandInput {
+  accentColors: [String!]!
+  eyebrow: String!
+  heroJapanese: String!
+  heroSideText: String!
+  japaneseMark: String!
+}
+
+type BusinessContact {
+  address: String!
+  city: String!
+  instagramUrl: String!
+  mapEmbedUrl: String!
+  whatsappPhone: String!
+}
+
+type BusinessHour {
+  closesAt: String!
+  dayOfWeek: Int!
+  id: String!
+  isClosed: Boolean!
+  opensAt: String!
+}
+
+input BusinessHourInput {
+  closesAt: String!
+  dayOfWeek: Int!
+  isClosed: Boolean! = false
+  opensAt: String!
+}
+
+type BusinessProfile {
+  currency: String!
+  logoUrl: String!
+  name: String!
+  tagline: String!
+  timezone: String!
+}
+
+type CatalogMedia {
+  alt: String!
+  id: String!
+  url: String!
+}
+
+type Checkout {
+  checkoutUrl: String!
+  expiresAt: DateTime!
+}
+
+input CheckoutInput {
+  date: String!
+  email: String!
+  name: String!
+  notes: String
+  phone: String!
+  serviceId: String!
+  time: String!
+}
+
+input ContactInput {
+  address: String!
+  city: String!
+  instagramUrl: String!
+  mapEmbedUrl: String!
+  whatsappPhone: String!
+}
+
+type Course {
+  description: String!
+  heroImage: CatalogMedia
+  heroImageId: String
+  id: String!
+  modules: [CourseModule!]!
+  pricePerClass: Int!
+  slug: String!
+  status: String!
+  subtitle: String
+  title: String!
+  whatsappPhone: String
+}
+
+type CourseCta {
+  description: String!
+  href: String
+  label: String!
+  title: String!
+}
+
+input CourseCtaInput {
+  description: String!
+  href: String
+  label: String!
+  title: String!
+}
+
+input CourseInput {
+  description: String!
+  heroImageId: String
+  modules: [CourseModuleInput!]!
+  pricePerClass: Int!
+  slug: String!
+  sortOrder: Int! = 0
+  status: String! = "DRAFT"
+  subtitle: String
+  title: String!
+  whatsappPhone: String
+}
+
+input CourseLeadInput {
+  courseId: String!
+  email: String
+  name: String!
+  phone: String
+}
+
+type CourseModule {
+  description: String!
+  icon: String
+  id: String!
+  sortOrder: Int!
+  title: String!
+}
+
+input CourseModuleInput {
+  description: String!
+  icon: String
+  sortOrder: Int! = 0
+  title: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+input ExperienceInput {
+  description: String!
+  icon: String
+  isVisible: Boolean! = true
+  sortOrder: Int! = 0
+  title: String!
+}
+
+type ExperienceItem {
+  description: String!
+  icon: String
+  id: String!
+  isVisible: Boolean!
+  sortOrder: Int!
+  title: String!
+}
+
+type GalleryCategory {
+  id: String!
+  name: String!
+  slug: String!
+  sortOrder: Int!
+}
+
+input GalleryCategoryInput {
+  name: String!
+  slug: String!
+  sortOrder: Int! = 0
+}
+
+type GalleryHeader {
+  description: String!
+  title: String!
+  watermark: String
+}
+
+input GalleryHeaderInput {
+  description: String!
+  title: String!
+  watermark: String
+}
+
+type GalleryItem {
+  alt: String!
+  categoryId: String!
+  id: String!
+  media: CatalogMedia!
+  mediaId: String!
+  sortOrder: Int!
+  status: String!
+  title: String!
+}
+
+input GalleryItemInput {
+  alt: String!
+  categoryId: String!
+  mediaId: String!
+  sortOrder: Int! = 0
+  status: String! = "DRAFT"
+  title: String!
+}
+
+type Lead {
+  courseName: String
+  createdAt: DateTime!
+  customerName: String
+  email: String
+  id: String!
+  notes: String
+  phone: String
+  planName: String
+  productName: String
+  status: String!
+}
+
+type Media {
+  alt: String!
+  id: String!
+  mimeType: String
+  title: String
+  url: String!
+}
+
+input MediaInput {
+  alt: String!
+  height: Int
+  mimeType: String
+  title: String
+  url: String!
+  width: Int
+}
+
+type MembershipBenefit {
+  icon: String
+  id: String!
+  sortOrder: Int!
+  text: String!
+}
+
+input MembershipBenefitInput {
+  icon: String
+  sortOrder: Int! = 0
+  text: String!
+}
+
+input MembershipLeadInput {
+  email: String
+  name: String!
+  phone: String
+  planId: String!
+}
+
+type MembershipPlan {
+  badge: String
+  benefits: [MembershipBenefit!]!
+  compareAtPrice: Int
+  description: String!
+  id: String!
+  isFeatured: Boolean!
+  monthlyPrice: Int!
+  name: String!
+  slug: String!
+  status: String!
+}
+
+input MembershipPlanInput {
+  badge: String
+  benefits: [MembershipBenefitInput!]!
+  compareAtPrice: Int
+  description: String!
+  isFeatured: Boolean! = false
+  monthlyPrice: Int!
+  name: String!
+  slug: String!
+  sortOrder: Int! = 0
+  status: String! = "DRAFT"
+}
+
+type Mutation {
+  adminLogin(email: String!, password: String!): AuthPayload!
+  createBookingCheckout(input: CheckoutInput!): Checkout!
+  createCourse(input: CourseInput!): Course!
+  createCourseLead(input: CourseLeadInput!): Lead!
+  createExperienceItem(input: ExperienceInput!): ExperienceItem!
+  createGalleryCategory(input: GalleryCategoryInput!): GalleryCategory!
+  createGalleryItem(input: GalleryItemInput!): GalleryItem!
+  createMediaAsset(input: MediaInput!): Media!
+  createMembershipLead(input: MembershipLeadInput!): Lead!
+  createMembershipPlan(input: MembershipPlanInput!): MembershipPlan!
+  createNavigationItem(input: NavigationInput!): Navigation!
+  createPageSection(input: PageSectionInput!): PageSection!
+  createProduct(input: ProductInput!): Product!
+  createProductReservation(input: ProductReservationInput!): Lead!
+  createService(input: ServiceInput!): Service!
+  createTestimonial(input: TestimonialInput!): Testimonial!
+  createValueProposition(input: ValuePropositionInput!): ValueProposition!
+  deleteCourse(id: String!): Boolean!
+  deleteExperienceItem(id: String!): Boolean!
+  deleteGalleryCategory(id: String!): Boolean!
+  deleteGalleryItem(id: String!): Boolean!
+  deleteMediaAsset(id: String!): Boolean!
+  deleteMembershipPlan(id: String!): Boolean!
+  deleteNavigationItem(id: String!): Boolean!
+  deletePageSection(id: String!): Boolean!
+  deleteProduct(id: String!): Boolean!
+  deleteService(id: String!): Boolean!
+  deleteTestimonial(id: String!): Boolean!
+  deleteValueProposition(id: String!): Boolean!
+  updateBookingStatus(id: String!, status: String!): Booking!
+  updateCourse(id: String!, input: CourseInput!): Course!
+  updateExperienceItem(id: String!, input: ExperienceInput!): ExperienceItem!
+  updateGalleryCategory(id: String!, input: GalleryCategoryInput!): GalleryCategory!
+  updateGalleryItem(id: String!, input: GalleryItemInput!): GalleryItem!
+  updateLeadStatus(id: String!, kind: String!, status: String!): Lead!
+  updateMediaAsset(id: String!, input: MediaInput!): Media!
+  updateMembershipPlan(id: String!, input: MembershipPlanInput!): MembershipPlan!
+  updateNavigationItem(id: String!, input: NavigationInput!): Navigation!
+  updatePageSection(id: String!, input: PageSectionInput!): PageSection!
+  updateProduct(id: String!, input: ProductInput!): Product!
+  updateService(id: String!, input: ServiceInput!): Service!
+  updateServiceDuration(id: String!, minutes: Int!): Service!
+  updateTestimonial(id: String!, input: TestimonialInput!): Testimonial!
+  updateValueProposition(id: String!, input: ValuePropositionInput!): ValueProposition!
+  upsertBrand(input: BrandInput!): BrandAesthetic!
+  upsertBusinessHour(input: BusinessHourInput!): BusinessHour!
+  upsertContact(input: ContactInput!): BusinessContact!
+  upsertCourseCta(input: CourseCtaInput!): CourseCta!
+  upsertGalleryHeader(input: GalleryHeaderInput!): GalleryHeader!
+  upsertPageHero(input: PageHeroInput!): PageHero!
+  upsertPhilosophy(input: PhilosophyInput!): Philosophy!
+  upsertProfile(input: ProfileInput!): BusinessProfile!
+  upsertVipBanner(input: VipBannerInput!): VipBanner!
+  upsertVipComparison(input: VipComparisonInput!): VipComparison!
+}
+
+type Navigation {
+  href: String!
+  id: String!
+  isVisible: Boolean!
+  label: String!
+  position: String!
+  sortOrder: Int!
+}
+
+input NavigationInput {
+  href: String!
+  isVisible: Boolean! = true
+  label: String!
+  position: String! = "HEADER"
+  sortOrder: Int! = 0
+}
+
+type PageHero {
+  ctaHref: String
+  ctaLabel: String
+  description: String!
+  eyebrow: String
+  imageUrl: String
+  pageKey: String!
+  title: String!
+}
+
+input PageHeroInput {
+  ctaHref: String
+  ctaLabel: String
+  description: String!
+  eyebrow: String
+  imageUrl: String
+  pageKey: String!
+  title: String!
+}
+
+type PageSection {
+  id: String!
+  isVisible: Boolean!
+  japaneseLabel: String
+  pageKey: String!
+  sectionKey: String!
+  sortOrder: Int!
+  subtitle: String
+  title: String!
+}
+
+input PageSectionInput {
+  isVisible: Boolean! = true
+  japaneseLabel: String
+  pageKey: String!
+  sectionKey: String!
+  sortOrder: Int! = 0
+  subtitle: String
+  title: String!
+}
+
+type PaymentResult {
+  bookingStatus: String!
+  status: String!
+}
+
+type Philosophy {
+  imageAlt: String
+  imageUrl: String
+  japaneseTitle: String!
+  kicker: String!
+  paragraphs: [PhilosophyParagraph!]!
+  pillars: [PhilosophyPillar!]!
+  quote: String!
+  title: String!
+}
+
+input PhilosophyInput {
+  imageAlt: String
+  imageUrl: String
+  japaneseTitle: String!
+  kicker: String!
+  paragraphs: [String!]!
+  pillars: [PhilosophyPillarInput!]!
+  quote: String!
+  title: String!
+}
+
+type PhilosophyParagraph {
+  id: String!
+  sortOrder: Int!
+  text: String!
+}
+
+type PhilosophyPillar {
+  description: String!
+  id: String!
+  label: String!
+  sortOrder: Int!
+}
+
+input PhilosophyPillarInput {
+  description: String!
+  label: String!
+}
+
+type Product {
+  badge: String
+  description: String
+  id: String!
+  image: CatalogMedia
+  imageId: String
+  name: String!
+  slug: String!
+  status: String!
+  stockQuantity: Int!
+  variants: [ProductVariant!]!
+}
+
+input ProductInput {
+  badge: String
+  description: String
+  imageId: String
+  isFeatured: Boolean! = false
+  name: String!
+  slug: String!
+  sortOrder: Int! = 0
+  status: String! = "DRAFT"
+  stockQuantity: Int! = 0
+  variants: [ProductVariantInput!]!
+}
+
+input ProductReservationInput {
+  customerName: String!
+  notes: String
+  phone: String
+  productId: String!
+}
+
+type ProductVariant {
+  id: String!
+  label: String!
+  price: Int!
+  sku: String
+  stockQuantity: Int!
+}
+
+input ProductVariantInput {
+  label: String!
+  price: Int!
+  sku: String
+  stockQuantity: Int! = 0
+}
+
+input ProfileInput {
+  currency: String!
+  logoUrl: String!
+  name: String!
+  tagline: String!
+  timezone: String!
+}
+
+type Query {
+  adminAudit(take: Int! = 100): [AuditEntry!]!
+  adminCatalog: AdminCatalog!
+  adminNavigation: [Navigation!]!
+  adminSiteContent: SiteContent!
+  availableSlots(date: String!, serviceId: String!): [Slot!]!
+  bookingPaymentStatus(id: String!): PaymentResult!
+  bookings: [Booking!]!
+  businessHours: [BusinessHour!]!
+  courseLeads: [Lead!]!
+  courses: [Course!]!
+  galleryCategories: [GalleryCategory!]!
+  galleryItems(categorySlug: String): [GalleryItem!]!
+  legacySettingKeys: [String!]!
+  media: [Media!]!
+  membershipLeads: [Lead!]!
+  membershipPlans: [MembershipPlan!]!
+  navigation(position: String): [Navigation!]!
+  productReservations: [Lead!]!
+  products: [Product!]!
+  services: [Service!]!
+  siteContent: SiteContent!
+}
+
+type Service {
+  badge: String
+  description: String!
+  durationMinutes: Int
+  icon: String
+  id: String!
+  isFeatured: Boolean!
+  name: String!
+  price: Int!
+  slug: String!
+  sortOrder: Int!
+  status: String!
+}
+
+input ServiceInput {
+  badge: String
+  description: String!
+  durationMinutes: Int
+  icon: String
+  isFeatured: Boolean! = false
+  name: String!
+  price: Int!
+  slug: String!
+  sortOrder: Int! = 0
+  status: String! = "DRAFT"
+}
+
+type SiteContent {
+  brand: BrandAesthetic
+  contact: BusinessContact
+  courseCta: CourseCta
+  experience: [ExperienceItem!]!
+  galleryHeader: GalleryHeader
+  homeHero: PageHero
+  pageSections: [PageSection!]!
+  philosophy: Philosophy
+  profile: BusinessProfile
+  storeHero: PageHero
+  testimonials: [Testimonial!]!
+  valueProps: [ValueProposition!]!
+  vipBanner: VipBanner
+  vipComparison: VipComparison
+  vipHero: PageHero
+}
+
+type Slot {
+  available: Boolean!
+  time: String!
+}
+
+type Testimonial {
+  author: String!
+  id: String!
+  isVisible: Boolean!
+  service: String
+  sortOrder: Int!
+  text: String!
+}
+
+input TestimonialInput {
+  author: String!
+  isVisible: Boolean! = true
+  service: String
+  sortOrder: Int! = 0
+  text: String!
+}
+
+type ValueProposition {
+  description: String!
+  icon: String
+  id: String!
+  isVisible: Boolean!
+  sortOrder: Int!
+  title: String!
+}
+
+input ValuePropositionInput {
+  description: String!
+  icon: String
+  isVisible: Boolean! = true
+  sortOrder: Int! = 0
+  title: String!
+}
+
+type VipBanner {
+  ctaLabel: String!
+  description: String!
+  href: String!
+  title: String!
+}
+
+input VipBannerInput {
+  ctaLabel: String!
+  description: String!
+  href: String!
+  title: String!
+}
+
+type VipComparison {
+  individualPrice: Int!
+  savings: Int!
+  standardTotal: Int!
+  vipPrice: Int!
+  visits: Int!
+}
+
+input VipComparisonInput {
+  individualPrice: Int!
+  vipPrice: Int!
+  visits: Int!
+}

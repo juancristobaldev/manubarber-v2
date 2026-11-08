@@ -1,0 +1,545 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  EDITOR
+}
+enum PublicationStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+enum LeadStatus {
+  NEW
+  CONTACTED
+  CONFIRMED
+  CLOSED
+  CANCELLED
+}
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+enum SettingNodeType {
+  OBJECT
+  ARRAY
+  STRING
+  NUMBER
+  BOOLEAN
+  NULL
+}
+
+model User {
+  id String @id @default(uuid()) @db.Uuid
+  email String @unique
+  passwordHash String
+  displayName String
+  role UserRole @default(EDITOR)
+  isActive Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  auditLogs AuditLog[]
+}
+
+// ---------------------------------------------------------------------------
+// Typed editorial content. There is no JSON document storage: every field has
+// its own database column and every list is a related table.
+// ---------------------------------------------------------------------------
+
+model BusinessProfile {
+  id String @id @default(uuid()) @db.Uuid
+  key String @unique @default("default")
+  name String
+  tagline String
+  timezone String
+  currency String
+  logoUrl String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BusinessContact {
+  id String @id @default(uuid()) @db.Uuid
+  key String @unique @default("default")
+  address String
+  city String
+  instagramUrl String
+  whatsappPhone String
+  mapEmbedUrl String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BrandAesthetic {
+  id String @id @default(uuid()) @db.Uuid
+  key String @unique @default("default")
+  japaneseMark String
+  eyebrow String
+  heroSideText String
+  heroJapanese String
+  accentColors BrandAccentColor[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BrandAccentColor {
+  id String @id @default(uuid()) @db.Uuid
+  brandId String @db.Uuid
+  hexColor String
+  sortOrder Int @default(0)
+  brand BrandAesthetic @relation(fields: [brandId], references: [id], onDelete: Cascade)
+  @@index([brandId, sortOrder])
+}
+
+// HOME / STORE / VIP heroes share one typed shape. pageKey is unique.
+model PageHero {
+  id String @id @default(uuid()) @db.Uuid
+  pageKey String @unique
+  eyebrow String?
+  title String
+  description String
+  imageUrl String?
+  ctaLabel String?
+  ctaHref String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model GalleryHeader {
+  id String @id @default(uuid()) @db.Uuid
+  key String @unique @default("default")
+  title String
+  description String
+  watermark String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CourseCta {
+  id String @id @default(uuid()) @db.Uuid
+  key String @unique @default("default")
+  title String
+  description String
+  label String
+  href String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model VipBanner {
+  id String @id @default(uuid()) @db.Uuid
+  key String @unique @default("default")
+  title String
+  description String
+  ctaLabel String
+  href String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// standardTotal and savings are derived, never stored twice.
+model VipComparison {
+  id String @id @default(uuid()) @db.Uuid
+  key String @unique @default("default")
+  visits Int
+  individualPrice Int
+  vipPrice Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Philosophy {
+  id String @id @default(uuid()) @db.Uuid
+  key String @unique @default("default")
+  japaneseTitle String
+  title String
+  kicker String
+  quote String
+  imageUrl String?
+  imageAlt String?
+  paragraphs PhilosophyParagraph[]
+  pillars PhilosophyPillar[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PhilosophyParagraph {
+  id String @id @default(uuid()) @db.Uuid
+  philosophyId String @db.Uuid
+  text String
+  sortOrder Int @default(0)
+  philosophy Philosophy @relation(fields: [philosophyId], references: [id], onDelete: Cascade)
+  @@index([philosophyId, sortOrder])
+}
+
+model PhilosophyPillar {
+  id String @id @default(uuid()) @db.Uuid
+  philosophyId String @db.Uuid
+  label String
+  description String
+  sortOrder Int @default(0)
+  philosophy Philosophy @relation(fields: [philosophyId], references: [id], onDelete: Cascade)
+  @@index([philosophyId, sortOrder])
+}
+
+model ExperienceItem {
+  id String @id @default(uuid()) @db.Uuid
+  title String
+  description String
+  icon String?
+  sortOrder Int @default(0)
+  isVisible Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([isVisible, sortOrder])
+}
+
+model ValueProposition {
+  id String @id @default(uuid()) @db.Uuid
+  icon String?
+  title String
+  description String
+  sortOrder Int @default(0)
+  isVisible Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([isVisible, sortOrder])
+}
+
+model Testimonial {
+  id String @id @default(uuid()) @db.Uuid
+  author String
+  service String?
+  text String
+  sortOrder Int @default(0)
+  isVisible Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([isVisible, sortOrder])
+}
+
+// Section headings previously hardcoded in the pages.
+model PageSection {
+  id String @id @default(uuid()) @db.Uuid
+  pageKey String
+  sectionKey String
+  japaneseLabel String?
+  title String
+  subtitle String?
+  sortOrder Int @default(0)
+  isVisible Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([pageKey, sectionKey])
+  @@index([pageKey, isVisible, sortOrder])
+}
+
+// Quarantine for settings that could not be mapped to a domain model during
+// migration. Values are preserved as typed nodes, never as JSON documents.
+model LegacySetting {
+  id String @id @default(uuid()) @db.Uuid
+  key String @unique
+  isPublic Boolean @default(false)
+  createdAt DateTime @default(now())
+  nodes LegacySettingNode[]
+}
+
+model LegacySettingNode {
+  id String @id @default(uuid()) @db.Uuid
+  settingId String @db.Uuid
+  path String[] @default([])
+  type SettingNodeType
+  stringValue String?
+  numberValue Decimal? @db.Decimal
+  booleanValue Boolean?
+  setting LegacySetting @relation(fields: [settingId], references: [id], onDelete: Cascade)
+  @@index([settingId])
+}
+
+model MediaAsset {
+  id String @id @default(uuid()) @db.Uuid
+  url String @unique
+  alt String
+  title String?
+  mimeType String?
+  width Int?
+  height Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  galleryItems GalleryItem[]
+  products Product[]
+  courses Course[]
+  @@index([createdAt])
+}
+
+model NavigationItem {
+  id String @id @default(uuid()) @db.Uuid
+  label String
+  href String
+  position String @default("HEADER") // HEADER or FOOTER
+  sortOrder Int @default(0)
+  isVisible Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([position, isVisible, sortOrder])
+}
+
+model BusinessHour {
+  id String @id @default(uuid()) @db.Uuid
+  dayOfWeek Int // ISO: 1 Monday ... 7 Sunday
+  opensAt String // HH:mm in the configured timezone
+  closesAt String
+  isClosed Boolean @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([dayOfWeek])
+}
+
+model Service {
+  id String @id @default(uuid()) @db.Uuid
+  slug String @unique
+  name String
+  description String
+  price Int // CLP, never float
+  durationMinutes Int?
+  icon String?
+  badge String?
+  isFeatured Boolean @default(false)
+  status PublicationStatus @default(DRAFT)
+  sortOrder Int @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  bookings Booking[]
+  @@index([status, sortOrder])
+}
+
+model GalleryCategory {
+  id String @id @default(uuid()) @db.Uuid
+  slug String @unique
+  name String
+  sortOrder Int @default(0)
+  items GalleryItem[]
+}
+model GalleryItem {
+  id String @id @default(uuid()) @db.Uuid
+  title String
+  alt String
+  status PublicationStatus @default(DRAFT)
+  sortOrder Int @default(0)
+  mediaId String @db.Uuid
+  categoryId String @db.Uuid
+  media MediaAsset @relation(fields: [mediaId], references: [id], onDelete: Restrict)
+  category GalleryCategory @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([status, categoryId, sortOrder])
+}
+
+model Product {
+  id String @id @default(uuid()) @db.Uuid
+  slug String @unique
+  name String
+  description String?
+  badge String?
+  status PublicationStatus @default(DRAFT)
+  stockQuantity Int @default(0)
+  isFeatured Boolean @default(false)
+  sortOrder Int @default(0)
+  imageId String? @db.Uuid
+  image MediaAsset? @relation(fields: [imageId], references: [id], onDelete: SetNull)
+  variants ProductVariant[]
+  reservations ProductReservation[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([status, sortOrder])
+}
+model ProductVariant {
+  id String @id @default(uuid()) @db.Uuid
+  productId String @db.Uuid
+  label String // e.g. 30ml
+  price Int // CLP
+  sku String? @unique
+  stockQuantity Int @default(0)
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  @@unique([productId, label])
+}
+
+model MembershipPlan {
+  id String @id @default(uuid()) @db.Uuid
+  slug String @unique
+  name String
+  description String
+  monthlyPrice Int
+  compareAtPrice Int?
+  badge String?
+  isFeatured Boolean @default(false)
+  status PublicationStatus @default(DRAFT)
+  sortOrder Int @default(0)
+  benefits MembershipBenefit[]
+  leads MembershipLead[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([status, sortOrder])
+}
+model MembershipBenefit {
+  id String @id @default(uuid()) @db.Uuid
+  planId String @db.Uuid
+  text String
+  icon String?
+  sortOrder Int @default(0)
+  plan MembershipPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
+  @@index([planId, sortOrder])
+}
+
+model Course {
+  id String @id @default(uuid()) @db.Uuid
+  slug String @unique
+  title String
+  subtitle String?
+  description String
+  pricePerClass Int
+  whatsappPhone String?
+  heroImageId String? @db.Uuid
+  status PublicationStatus @default(DRAFT)
+  sortOrder Int @default(0)
+  heroImage MediaAsset? @relation(fields: [heroImageId], references: [id], onDelete: SetNull)
+  modules CourseModule[]
+  leads CourseLead[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([status, sortOrder])
+}
+model CourseModule {
+  id String @id @default(uuid()) @db.Uuid
+  courseId String @db.Uuid
+  title String
+  description String
+  icon String?
+  sortOrder Int @default(0)
+  course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  @@index([courseId, sortOrder])
+}
+
+model Customer {
+  id String @id @default(uuid()) @db.Uuid
+  name String
+  phone String?
+  email String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  bookings Booking[]
+  @@index([phone])
+  @@index([email])
+}
+model Booking {
+  id String @id @default(uuid()) @db.Uuid
+  customerId String @db.Uuid
+  serviceId String @db.Uuid
+  scheduledAt DateTime?
+  endsAt DateTime?
+  holdExpiresAt DateTime?
+  depositAmount Int?
+  flowToken String? @unique
+  paymentStatus String?
+  flowOrder String?
+  status BookingStatus @default(PENDING)
+  notes String?
+  source String @default("WEB")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  customer Customer @relation(fields: [customerId], references: [id], onDelete: Restrict)
+  service Service @relation(fields: [serviceId], references: [id], onDelete: Restrict)
+  @@index([status, scheduledAt])
+  @@index([customerId, createdAt])
+}
+model ProductReservation {
+  id String @id @default(uuid()) @db.Uuid
+  productId String @db.Uuid
+  customerName String
+  phone String?
+  quantity Int @default(1)
+  status LeadStatus @default(NEW)
+  notes String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  product Product @relation(fields: [productId], references: [id], onDelete: Restrict)
+  @@index([status, createdAt])
+}
+model MembershipLead {
+  id String @id @default(uuid()) @db.Uuid
+  planId String @db.Uuid
+  name String
+  phone String?
+  email String?
+  status LeadStatus @default(NEW)
+  notes String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  plan MembershipPlan @relation(fields: [planId], references: [id], onDelete: Restrict)
+  @@index([status, createdAt])
+}
+model CourseLead {
+  id String @id @default(uuid()) @db.Uuid
+  courseId String @db.Uuid
+  name String
+  phone String?
+  email String?
+  status LeadStatus @default(NEW)
+  notes String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  course Course @relation(fields: [courseId], references: [id], onDelete: Restrict)
+  @@index([status, createdAt])
+}
+enum AuditValueType {
+  STRING
+  UUID
+  INTEGER
+  DECIMAL
+  BOOLEAN
+  TIMESTAMP
+}
+
+model AuditLog {
+  id String @id @default(uuid()) @db.Uuid
+  actorId String? @db.Uuid
+  action String
+  entity String
+  entityId String
+  createdAt DateTime @default(now())
+  actor User? @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  changes AuditChange[]
+  @@index([entity, entityId, createdAt])
+}
+
+// One row per changed field. Exactly one typed value pair is populated
+// according to valueType; there is no JSON snapshot.
+model AuditChange {
+  id String @id @default(uuid()) @db.Uuid
+  auditLogId String @db.Uuid
+  field String
+  valueType AuditValueType
+  oldString String?
+  newString String?
+  oldInteger BigInt?
+  newInteger BigInt?
+  oldDecimal Decimal? @db.Decimal
+  newDecimal Decimal? @db.Decimal
+  oldBoolean Boolean?
+  newBoolean Boolean?
+  oldTimestamp DateTime? @db.Timestamp(3)
+  newTimestamp DateTime? @db.Timestamp(3)
+  auditLog AuditLog @relation(fields: [auditLogId], references: [id], onDelete: Cascade)
+  @@index([auditLogId])
+}
