@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "vercel-build": "prisma generate",
     "prebuild": "prisma generate",
     "build": "nest build",
     "start:dev": "nest start --watch",
